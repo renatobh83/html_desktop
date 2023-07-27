@@ -3,7 +3,9 @@ body {
   padding: 0;
   overflow: hidden;
 }
-
+button {
+  height: 30px;
+}
 #container {
   position: absolute;
   top: 0;
@@ -15,20 +17,28 @@ body {
 }
 
 .dynamic-div {
+    padding: 0.4rem;
+   display: flex;
+  gap: 0.65rem;
   position: absolute;
-  width: 200px; /* Defina um valor inicial de largura */
-  height: 150px; /* Defina um valor inicial de altura */
-  background-color: #ccc;
+ /* width: 200px; 
+  height: 150px; */
+   width: 500px; 
+  height: 350px; 
   border: 1px solid #999;
   resize: both;
-  overflow: auto
-}
+  overflow: auto;
+ 
 
+}
+.content{
+
+}
 .resize-handle {
   position: absolute;
   width: 30px;
   height: 30px;
-  background-color: #007bff;
+  background-color: #9ba3ad;
   right: 0;
   bottom: 0;
   cursor: se-resize;
