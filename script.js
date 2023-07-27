@@ -80,10 +80,13 @@ document.addEventListener("DOMContentLoaded", function () {
     newDiv.style.top = `${e.clientY - container.getBoundingClientRect().top}px`;
 
     const appName = prompt("Insira o código HTML:");
+
+    if (appName.startsWith("http")) { 
+
     newDiv.innerHTML = `<iframe src="${appName}" frameborder="0"></iframe>`;
-    
-    //newDiv.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/1RPFUrP_lDU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
-    //newDiv.innerHTML = htmlCode;
+    } else {
+    newDiv.innerHTML = appName
+    }    
 
     const closeButton = document.createElement("button");
     closeButton.innerText = "Fechar";
