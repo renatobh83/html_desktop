@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f0f0f0;
+  z-index: -1; /* Para enviar o contêiner para o fundo e permitir que o clique alcance os elementos */
+}
+
+.dynamic-div {
+  position: absolute;
+  width: 200px; /* Defina um valor inicial de largura */
+  height: 150px; /* Defina um valor inicial de altura */
+  background-color: #ccc;
+  border: 1px solid #999;
+  resize: both;
+  overflow: auto
+}
+
+.resize-handle {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: #007bff;
+  right: 0;
+  bottom: 0;
+  cursor: se-resize;
+  pointer-events: auto; /* Permitir interação do mouse com a alça de redimensionamento */
+}
